@@ -41,7 +41,7 @@ public class Main {
             Collections.sort(lc);
             lc.imprime();
 
-            System.out.println("Deseja cadastrar um novo contato: ");
+            System.out.println("Deseja cadastrar um novo contato Mané: ");
             fim = sc.next();
             if(fim.equals("n"))
                 System.exit(0);
