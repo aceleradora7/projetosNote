@@ -1,6 +1,7 @@
 package aceleradora;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
@@ -11,9 +12,21 @@ public class Main {
     private static ArrayList<Boolean> result = new ArrayList<>();
     private static ArrayList<String> listaM = new ArrayList<>();
     private static ArrayList<String> listaN = new ArrayList<>();
+    private static ArrayList<Funcionario> funcionario = new ArrayList<>();
+
 
 
     public static void populaLista(){
+        Funcionario f1 = new Funcionario("Marcus", 23);
+        Funcionario f2 = new Funcionario("Antonio", 36);
+        Funcionario f3 = new Funcionario("João", 75);
+        Funcionario f4 = new Funcionario("Rafael", 54);
+
+        funcionario.add(f1);
+        funcionario.add(f2);
+        funcionario.add(f3);
+        funcionario.add(f4);
+
         numeros.add(5);
         numeros.add(4);
         numeros.add(3);
@@ -125,11 +138,32 @@ public class Main {
         Impares i = new Impares();
         System.out.println("Impares: "+i.separarParesImpares(numeros));
 
+        Binario b = new Binario();
+        System.out.println("Binario: "+b.converte(6));
 
+        Collections.sort(amigos);
+        System.out.println("Lista amigos após a ordenação:");
+        for(String lista: amigos){
+            System.out.println(lista);
+        }
 
+//        Collections.sort(funcionario);
+//        for(Funcionario numInscricao: funcionario){
+//            System.out.println(numInscricao);
+//        }
+
+        System.out.println("Ordenado por Nome: ");
+        Collections.sort(funcionario, Funcionario.OrdenaNome);
+        for(Funcionario fun: funcionario){
+            System.out.println(funcionario);
+        }
+
+        System.out.println("Ordenado por Inscricao: ");
+        Collections.sort(funcionario, Funcionario.OrdenaInscricao);
+        for(Funcionario fun2: funcionario){
+            System.out.println(funcionario);
+        }
     }
-
-
 }
 
 

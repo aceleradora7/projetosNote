@@ -12,15 +12,19 @@ public class Binario {
 
     public ArrayList<Integer> converte(int valor){
         ArrayList<Integer> result = new ArrayList<>();
-        int par = 0;
+        int bin = 0;
         while(valor != 0){
-            if(valor % 2==0){
-
+            if(valor % 2==0) {
+                valor = valor/2;
+                bin = 0;
+                result.add(0,bin);
+            }
+            else {
+                valor = valor/2;
+                bin = 1;
+                result.add(0,bin);
+            }
         }
-
-
-        }
-
         return result;
     }
 }
